@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>my portfolio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="./images/logo.png" class="logo">
+                <ul>
+                    <li><a href="">home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li><a href="">contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p><h2> Welcome to my webpage<br>I am Shubham</h2> </p>
+                <p>A Computer Science Enthusiast</p>
+            </div>
+        </div>
+
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./images/background.png">
+
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About me</h1>
+                    <p>I will write later on</p>
+                    <div class="tab-titles"> 
+                        <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">experience</p>
+                        <p class="tab-links" onclick="opentab('education')">education</p>
+                    </div>
+                    <div class="tab-content active-tab" id="skills">
+                        <ul>
+                            <li><span>1</span><br>Hi</li>
+                            <li><span>2</span></li>
+                            <li><span>3</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="experience">
+                        <ul>
+                            <li><span>1</span><br>Hi</li>
+                            <li><span>2</span></li>
+                            <li><span>3</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="education">
+                        <ul>
+                            <li><span>1h</span><br>Hi</li>
+                            <li><span>h</span></li>
+                            <li><span>3h</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-content");
+
+        function opentab(tabname) {
+            for (tablink of tablinks){
+                 tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            } 
+            event.currentTarget.classList.add("active-link"); 
+            Document.getElementsById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
